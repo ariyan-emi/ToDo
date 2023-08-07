@@ -1,7 +1,7 @@
 ## Demo
 
 # ToDo
-To-do list website made with React JS, Tailwind CSS, TypeScript, and more.
+To-do list website made with React JS, Tailwind CSS, TypeScript and more.
 ![page](https://webvave.ir/temp/todo/1.png)
 
 ![Add New](https://webvave.ir/temp/todo/2.png)
