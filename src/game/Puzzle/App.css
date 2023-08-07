@@ -1,0 +1,101 @@
+.bodyPuzzle {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  user-select: none;
+  position: relative;
+transform: translate(0%, 25%);
+}
+@media only screen and (max-width: 700px) {
+  .bodyPuzzle{
+    transform: translate(0%, 20%);
+  }
+}
+
+.Menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-bottom: 20px;
+}
+
+.Menu > div {
+  margin: 3px;
+  padding-bottom: 3px;
+  background-color: #EAB308;
+  border-radius: 5px;
+  font-size: calc(5px + 2vmin);
+}
+
+.Time, .Moves {
+  flex-grow: 1;
+}
+
+.NewGameButton {
+  flex-grow: 2;
+  cursor: pointer;
+
+}
+
+.Game {
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  background-color: #6D28D9;
+  border-radius:10px ;
+  padding: 10px;
+  max-width: 400px;
+}
+
+.tile {
+  /*flex-basis: 24%;
+  padding-top:6.5%;
+  padding-bottom:18%;
+  font-size: calc(14px + 2vmin);
+  font-weight: bold;*/
+  flex-grow: 1;
+  border-radius: 10px;
+  margin: 1px;
+  height: 0;
+  cursor: pointer;
+}
+
+#tile0 {
+  cursor: default;
+}
+
+.winBox {
+  position: absolute;
+  top:45%;
+  left:50%;
+  min-width: 20%;
+}
+
+.win {
+  background-color: #c3c7d1;
+  border-radius: 10px;
+  color: #EAB308;
+  font-size: calc(5px + 2vmin);
+  padding: 10px 30px;
+  position: relative;
+  left: -50%;
+}
+
+.ChangeSizeBox {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 15px;
+}
+
+.ChangeSizeItem {
+  background-color: #EAB308;
+  padding: 5px;
+  flex-basis: 20%;
+  border-radius: 10px;
+  padding-bottom: 3px;
+  cursor: pointer;
+}

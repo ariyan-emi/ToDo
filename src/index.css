@@ -1,0 +1,405 @@
+@font-face {
+    font-family: IranSans;
+    src: url(./assets/Font/Sans_a4fran3.woff);
+    font-weight: bold;
+}
+* {
+    font-family: "IranSans" !important;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.inputStyles {
+    @apply bg-slate-100 text-slate-600 dark:text-slate-200 rounded-lg p-3 outline-transparent border-2 border-transparent hover:border-violet-600 focus:border-violet-600 focus:outline-none transition dark:bg-slate-800;
+}
+
+.btn {
+    @apply bg-yellow-500 hover:bg-yellow-500 py-3 px-6 text-slate-50 rounded-lg w-auto transition dark:bg-yellow-600 dark:hover:bg-yellow-700;
+}
+
+.btn:active {
+    @apply scale-95;
+}
+
+@layer components {
+    .tasksList > li:first-of-type article {
+        @apply bg-yellow-500 text-violet-700 dark:bg-yellow-500;
+    }
+
+    .tasksList > li:first-of-type article .description {
+        @apply text-violet-700;
+    }
+
+    .tasksList > li:first-of-type article > div {
+        @apply border-slate-900 dark:border-slate-900;
+    }
+
+    .listView1 article {
+        @apply h-40;
+    }
+
+    .listView2 article {
+        @apply h-64;
+    }
+
+    .children-styles {
+        @apply text-yellow-400;
+    }
+
+    .children-styles button {
+        @apply p-1;
+    }
+
+    .children-styles svg {
+        @apply w-6 h-6;
+    }
+
+    .inputStyles::placeholder {
+        @apply text-slate-400 dark:text-slate-400;
+    }
+
+    .stylesInputsField input,
+    .stylesInputsField textarea,
+    .stylesInputsField select {
+        @apply inputStyles mt-1;
+    }
+
+    .stylesInputsField label {
+        @apply mb-4 text-slate-600 dark:text-slate-500;
+    }
+
+    .barProgress {
+        @apply bg-slate-400 w-full h-3 rounded-full overflow-hidden dark:bg-slate-600/[.3];
+    }
+
+    .barProgress > div {
+        @apply bg-yellow-500 h-full;
+    }
+
+    .itemDirectory > .buttonsDir {
+        @apply xl:opacity-0 transition opacity-100;
+    }
+
+    .itemDirectory:hover > .buttonsDir {
+        @apply opacity-100;
+    }
+}
+
+/* clears the 'X' from Internet Explorer */
+input[type="search"]::-ms-clear {
+    display: none;
+    width: 0;
+    height: 0;
+}
+
+input[type="search"]::-ms-reveal {
+    display: none;
+    width: 0;
+    height: 0;
+}
+
+/* clears the 'X' from Chrome */
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+    display: none;
+}
+
+::-webkit-scrollbar {
+    @apply w-2;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    @apply bg-slate-200 dark:bg-slate-800;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    @apply bg-slate-300 dark:bg-slate-700 rounded-md border border-red-400;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    @apply bg-slate-400 dark:bg-slate-600;
+}
+
+.copyright-text > a {
+    color: rgba(251, 175, 67, 0.99);
+}
+
+.marginer > a {
+    margin-left: 15px;
+}
+
+.BarDisable {
+    display: none;
+}
+
+.GameBar {
+    width: 25vw;
+    height: 25vh;
+    background-color: rgba(121, 91, 245, 0.2);
+    border-radius: 50px;
+    border-top-right-radius: 0px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: auto;
+    position: fixed;
+    z-index: 100;
+}
+
+.DontShow {
+    display: none;
+}
+
+.Show {
+    background-color: rgba(121, 91, 245, 0.2);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 20;
+    width: 110%;
+    overflow: auto;
+    height: 100vh;
+}
+
+
+.xIconMini {
+    width: 25px;
+    height: 25px;
+    position: relative;
+    left: 100%;
+    border-bottom-left-radius: 10px;
+    transform: translate(-25px, 0%);
+    background-color: rgba(229, 131, 131, 0.37);
+}
+
+.xIconBig {
+    width: 80px;
+    height: 80px;
+    position: relative;
+    left: 100%;
+    transform: translate(-200px, 10px);
+}
+.SocialButton{
+    background-color:rgba(251, 175, 67,1);
+    border-radius: 50px;
+    border-bottom-left-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 9999999;
+    height: 50px;
+    width: 50px;
+}
+.SocialIcon{
+    height: 40px;
+    width: 40px;
+  }
+@media only screen and (max-width: 728px) {
+    .xIconBig {
+        width: 35px;
+        height: 35px;
+        position: relative;
+        left: 50%;
+        top: 5%;
+        transform: translate(-50%, 0%);
+    }
+}
+
+.xIconBig:active {
+    border-radius: 50px;
+    color: red;
+}
+
+.xIconMini:hover {
+    background-color: rgb(182, 53, 81);
+}
+
+.xIconMini:active {
+    background-color: rgb(255, 0, 0);
+}
+
+.button-29 {
+    align-items: center;
+    appearance: none;
+    background-image: radial-gradient(100% 100% at 100% 0, rgba(173, 122, 51, 0.73) 0, #5468ff 100%);
+    border: 0;
+    border-radius: 6px;
+    box-shadow: rgba(45, 35, 66, .4) 0 2px 4px, rgba(45, 35, 66, .3) 0 7px 13px -3px, rgba(58, 65, 111, .5) 0 -3px 0 inset;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    display: inline-flex;
+    font-family: "JetBrains Mono", monospace;
+    height: 100px;
+    justify-content: center;
+    line-height: 1;
+    list-style: none;
+    overflow: hidden;
+    padding-left: 16px;
+    padding-right: 16px;
+    position: relative;
+    text-align: left;
+    text-decoration: none;
+    transition: box-shadow .15s, transform .15s;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+    will-change: box-shadow, transform;
+    font-size: 18px;
+}
+
+.button-29:focus {
+    box-shadow: #3c4fe0 0 0 0 1.5px inset, rgba(45, 35, 66, .4) 0 2px 4px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
+}
+
+.button-29:hover {
+    box-shadow: rgba(45, 35, 66, .4) 0 4px 8px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
+    transform: translateY(-2px);
+}
+
+.button-29:active {
+    box-shadow: #3c4fe0 0 3px 7px inset;
+    transform: translateY(2px);
+}
+
+.ForCenter {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    width: 25%;
+    left: 100%;
+    transform: translate(-50%, 0%);
+}
+
+.maxAccount {
+    max-width: 100%;
+    border-radius: 1rem;
+    background-color: #EAB308;
+}
+.justifyedGrid{
+    justify-content: space-evenly;
+    justify-items: center;
+    align-content: space-evenly;
+    align-items: center;
+    position: relative;
+    left:50%;
+    transform: translate(-50%, 0%);
+}
+.parent {
+    display: flex;
+    flex-direction: row;
+}
+.child {
+    display: inline-block;
+    margin: 5px;
+    padding: 1rem 1rem;
+    vertical-align: middle;
+}
+.GameBarBtnMobile {
+    background-color: #EAB308;
+    color: #6D28D9;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    letter-spacing: 4px;
+    transition: 0.5s;
+    cursor: pointer;
+}
+.GameBarBtn {
+    padding: 25px 30px;
+    background-color: #EAB308;
+    color: #6D28D9;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    letter-spacing: 4px;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+
+.GameBarBtn:hover {
+    background: #6D28D9;
+    box-shadow: 0 0 5px #6D28D9,
+    0 0 25px #6D28D9,
+    0 0 50px #6D28D9,
+    0 0 200px #6D28D9;
+}
+
+.GameBarIcon {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.GameBarIconMobile {
+    width: 25px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 0%);
+}
+
+.ScrollBars {
+    overflow: visible;
+}
+
+.Backdrop {
+    display: flex;
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: rgba(242, 242, 242, 0.6);
+    width: 100vw;
+    height: 100vh;
+
+}
+
+.GameBarMobile {
+    width: 75vw;
+    height: 50vh;
+    background-color: rgba(121, 91, 245, 0.2);
+    border-radius: 50px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: auto;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    z-index: 100;
+}
+
+.xTop {
+    position: relative;
+    width: 25px;
+    height: 25px;
+    top: 5%;
+    left: 90%;
+    z-index: 99999;
+}
+

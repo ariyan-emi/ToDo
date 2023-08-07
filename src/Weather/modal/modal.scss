@@ -1,0 +1,71 @@
+.modal {
+    opacity: 0;
+    visibility: hidden;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba($color: #000000, $alpha: 0.4);
+    transition: 0.3s ease-in-out;
+
+    &.active {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    &__content {
+        width: 500px;
+        margin: 15% auto;
+        background-color: #f2f2f2;
+        border-radius: 5px;
+        position: relative;
+        transition: inherit;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-100px);
+    }
+
+    @media only screen and (max-width: 728px) {
+        &__content {
+            width: 300px;
+            margin: 15% auto;
+            background-color:#f2f2f2;
+            border-radius: 5px;
+            position: relative;
+            transition: inherit;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-100px);
+        }
+    }
+
+
+
+    &.active &__content {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+
+    &__header,
+    &__body,
+    &__footer {
+        padding: 16px 20px;
+    }
+
+    &__close {
+        position: absolute;
+        top: 16px;
+        right: 20px;
+        font-size: 1.5rem;
+        cursor: pointer;
+        color: #7f7f7f;
+
+        &:hover {
+            color: #000;
+        }
+    }
+}

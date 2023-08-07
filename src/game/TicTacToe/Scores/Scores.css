@@ -1,0 +1,23 @@
+.scores {
+  display: flex;
+  flex-direction: row;
+  color: black;
+  font-size: 26px;
+  justify-content: center;
+  margin-top: 26px;
+  font-weight: 100;
+}
+.scores div {
+  width: 150px;
+  text-align: center;
+  line-height: 35px;
+}
+
+@media (max-width: 700px) {
+  .scores {
+    font-size: 22px;
+  }
+  .scores div {
+    width: 100px;
+  }
+}

@@ -1,0 +1,1 @@
+export let GameHooks = {} as any
