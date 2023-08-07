@@ -3,8 +3,11 @@
 # ToDo
 To-do list website made with React JS, Tailwind CSS, TypeScript, Redux Toolkit and more.
 ![page](https://webvave.ir/temp/todo/1.png)
+
 ![Add New](https://webvave.ir/temp/todo/2.png)
+
 ![GameCenter](https://webvave.ir/temp/todo/3.png)
+
 Light mode:
 ![LightMod](https://webvave.ir/temp/todo/4.png)
 
