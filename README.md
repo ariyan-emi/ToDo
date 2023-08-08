@@ -49,7 +49,7 @@ git clone https://github.com/ariyan-emi/ToDo.git
 ```
 go to project
 ```
-cd ToDo
+cd ToDo-main
 ```
 install npm
 ```
