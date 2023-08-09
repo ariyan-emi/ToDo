@@ -40,6 +40,7 @@
 .weather-container {
   width: auto;
   max-width: 80%;
+  height: 90%;
   margin: 5px auto;
   padding: 2rem 2.5rem;
   border-radius: 1.5rem;

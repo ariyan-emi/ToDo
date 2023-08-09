@@ -2,7 +2,7 @@ import React, {useState} from "react";
 import {useAppDispatch, useAppSelector} from "../../store/hooks";
 import {menusActions} from "../../store/Menu.store";
 import {GameHooks} from "./HookState";
-import {Calendar} from "react-multi-date-picker"
+
 import {ReactComponent as GameBar} from "../../assets/gameboy.svg";
 import {ReactComponent as TicTac} from "../../assets/tic-tac-toe.svg";
 import {ReactComponent as Game2048} from "../../assets/2048.svg";
@@ -10,6 +10,10 @@ import Weather from "../../Weather/WeatherApp";
 import {ElseIf, If} from "../Service/condition";
 import GameTicTac from "../../game/TicTacToe/Game/Game";
 import GamePuzzle from "../../game/Puzzle/App";
+import {AdapterDayjs} from "@mui/x-date-pickers/AdapterDayjs";
+import {DateCalendar} from "@mui/x-date-pickers/DateCalendar";
+import dayjs from "dayjs";
+import {LocalizationProvider} from "@mui/x-date-pickers/LocalizationProvider";
 
 export default function MobileAccountData({BackState, BackSet}: { BackState: boolean, BackSet: any }) {
 
@@ -80,7 +84,7 @@ export default function MobileAccountData({BackState, BackSet}: { BackState: boo
             <ElseIf condition={GameHooks.GameState.parentDiv == "DontShow"}>
                 <div>
 
-                    <div className="justifyedGrid ">
+                    <div className="justifyedGrid">
                         <Weather/>
                         <div className='parent'>
                             <button className="child GameBarBtnMobile" onClick={() => {
@@ -90,7 +94,12 @@ export default function MobileAccountData({BackState, BackSet}: { BackState: boo
                             }}>
                                 <GameBar className="GameBarIconMobile "/>
                             </button>
-                            <Calendar className="maxAccount child"/>
+                           <div className="child">
+                               <LocalizationProvider dateAdapter={AdapterDayjs}>
+                                   <DateCalendar sx={{width:"90%"}} className="maxAccount" defaultValue={dayjs(new Date())} />
+                               </LocalizationProvider>
+                           </div>
+
                         </div>
                     </div>
                 </div>

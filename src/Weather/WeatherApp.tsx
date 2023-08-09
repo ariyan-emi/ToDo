@@ -53,7 +53,7 @@ export default function Weather() {
                                     {moment(state.Time).format("h:mm a")}
                                 </p>
                             </div>
-                            <p className="paragraph font-bold" style={{color:"#6D28D9"}}>
+                            <p className="font-bold" style={{color:"#6D28D9"}}>
                                 {moment(state.Time).format("MMM Do YY")}
                             </p>
                         </div>
@@ -70,7 +70,7 @@ export default function Weather() {
                         </div>
                         <div className="container-bot">
                             <p className="paragraph winds">
-                                <LocationOnIcon className="iconsWeather"/>{state.country}, {state.countryName}
+                                <LocationOnIcon className="iconsWeather"/>{state.countryName}
                             </p>
 
                         </div>

@@ -140,17 +140,18 @@ input[type="search"]::-webkit-search-results-decoration {
 }
 
 .GameBar {
-    width: 25vw;
-    height: 25vh;
+    height: 20vh;
     background-color: rgba(121, 91, 245, 0.2);
     border-radius: 50px;
     border-top-right-radius: 0px;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    overflow: auto;
     position: fixed;
     z-index: 100;
+}
+.CenterGamer{
+    padding-right: 4vw;
 }
 
 .DontShow {
@@ -228,7 +229,12 @@ input[type="search"]::-webkit-search-results-decoration {
 .xIconMini:active {
     background-color: rgb(255, 0, 0);
 }
-
+.centered{
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
 .button-29 {
     align-items: center;
     appearance: none;
@@ -266,12 +272,11 @@ input[type="search"]::-webkit-search-results-decoration {
 
 .button-29:hover {
     box-shadow: rgba(45, 35, 66, .4) 0 4px 8px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
-    transform: translateY(-2px);
+
 }
 
 .button-29:active {
     box-shadow: #3c4fe0 0 3px 7px inset;
-    transform: translateY(2px);
 }
 
 .ForCenter {
@@ -286,8 +291,9 @@ input[type="search"]::-webkit-search-results-decoration {
 
 .maxAccount {
     max-width: 100%;
+    height: 85%;
     border-radius: 1rem;
-    background-color: #EAB308;
+    background-color: #eab308;
 }
 .justifyedGrid{
     justify-content: space-evenly;
@@ -319,7 +325,7 @@ input[type="search"]::-webkit-search-results-decoration {
     cursor: pointer;
 }
 .GameBarBtn {
-    padding: 25px 30px;
+    padding: 15px 15px;
     background-color: #EAB308;
     color: #6D28D9;
     font-weight: bold;
@@ -329,8 +335,9 @@ input[type="search"]::-webkit-search-results-decoration {
     transition: 0.5s;
     cursor: pointer;
 }
-
-
+.scroler{
+    overflow-y: scroll;
+}
 .GameBarBtn:hover {
     background: #6D28D9;
     box-shadow: 0 0 5px #6D28D9,
@@ -340,8 +347,8 @@ input[type="search"]::-webkit-search-results-decoration {
 }
 
 .GameBarIcon {
-    width: 50px;
-    height: 50px;
+    width: 25px;
+    height: 25px;
     display: flex;
     justify-content: center;
     align-items: center;
