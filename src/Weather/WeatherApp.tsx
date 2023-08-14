@@ -43,8 +43,10 @@ export default function Weather() {
 
     return (
         <>
-                <If condition={!state.block}>
-                    <section className="weather-container">
+                         {(() => {
+        if (!state.block) {
+          return (
+            <section className="weather-container">
                         <div className="container-top">
                             <div>
                                 <h1 className="weather-title text-white">Today</h1>
@@ -89,10 +91,13 @@ export default function Weather() {
                             </p>
                         </div>
                     </section>
-                </If>
-                <Else>
-                    <WeatherBlock/>
-                </Else>
+          )
+        } else {
+          return (
+           <WeatherBlock/>
+          )
+        }
+      })()}
         </>
     )
 }
