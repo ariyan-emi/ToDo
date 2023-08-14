@@ -43,8 +43,56 @@ export default function Weather() {
 
     return (
         <>
-           Helloosdsdsfsdfsd
+                <If condition={!state.block}>
+                    <section className="weather-container">
+                        <div className="container-top">
+                            <div>
+                                <h1 className="weather-title text-white">Today</h1>
+                                <p className="paragraph" style={{color:"#6D28D9"}}>
+                                    {moment(state.Time).format("h:mm a")}
+                                </p>
+                            </div>
+                            <p className="font-bold" style={{color:"#6D28D9"}}>
+                                {moment(state.Time).format("MMM Do YY")}
+                            </p>
+                        </div>
+                        <div className="container-mid">
+        <span className="weather-temp-main text-violet-700">
+          <span className="weather-tepm text-slate-800">{state.temp}</span>°C
+        </span>
+                            <img
+                                width="220"
+                                height="220"
+                                src={state.icon}
+                                alt={`Icon of ${state.country} ${state.countryName}`}
+                            />
+                        </div>
+                        <div className="container-bot">
+                            <p className="paragraph winds">
+                                <LocationOnIcon className="iconsWeather"/>{state.countryName}
+                            </p>
 
+                        </div>
+                        <div className="container-bot">
+                            <p className="paragraph winds">
+                                <AcUnitIcon className="iconsWeather"/>{state.status}
+                            </p>
+                        </div>
+                        <div className="container-bot">
+                            <p className="paragraph winds">
+                                <AirIcon className="iconsWeather"/> {state.wind}
+                            </p>
+                        </div>
+                        <div className="container-bot">
+                            <p className="paragraph winds">
+                                <WaterDropIcon className="iconsWeather"/> {state.humidity}
+                            </p>
+                        </div>
+                    </section>
+                </If>
+                <Else>
+                    <WeatherBlock/>
+                </Else>
         </>
     )
 }
