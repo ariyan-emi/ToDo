@@ -91,9 +91,9 @@ export default function Weather() {
                         </div>
                     </section>
                 </If>
-                <ElseIf condition={state.block}>
+                <Else>
                     <WeatherBlock/>
-                </ElseIf>
+                </Else>
             </Condition>
 
         </>
