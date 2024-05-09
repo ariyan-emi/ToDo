@@ -58,7 +58,7 @@ const Footer: React.FC = () => {
                       <footer >
                       <div className="text-center marginer mb-2">
                           <a href="https://webvave.ir"><LanguageIcon sx={{fontSize:35}}/></a>
-                          <a href="https://www.linkedin.com/in/ariyan-emami-8b99a3251"><LinkedInIcon sx={{fontSize:35}}/></a>
+                          <a href="https://www.linkedin.com/in/ariyan-emami"><LinkedInIcon sx={{fontSize:35}}/></a>
                           <a href="https://github.com/ariyan-emi"><GitHubIcon sx={{fontSize:35}}/></a>
                           <a href="https://www.instagram.com/ariyan_emi"><InstagramIcon sx={{fontSize:35}}/></a>
                           <a href="https://telegram.me/ARIYANEM231"><TelegramIcon sx={{fontSize:35}}/></a>
