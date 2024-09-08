@@ -36,7 +36,6 @@ const App: React.FC = () => {
       )}
       <Menu />
       <TasksSection />
-      <AccountData />
     </div>
       </div>
   );

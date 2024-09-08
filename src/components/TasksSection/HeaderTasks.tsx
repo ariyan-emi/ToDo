@@ -1,6 +1,7 @@
 import React, {useState} from "react";
 import BtnAddTask from "../Utilities/BtnAddTask";
 import {ReactComponent as MenuIcon} from "../../assets/menu.svg";
+import { ReactComponent as IconGame } from "../../assets/gameboy.svg";
 import AppsIcon from '@mui/icons-material/Apps';
 import SearchField from "./SearchField";
 import {useAppDispatch} from "../../store/hooks";
@@ -73,7 +74,7 @@ const HeaderTasks: React.FC = () => {
                 <DarkMode/>
                 <BtnAddTask className="hidden xl:block shadow-slate-400  dark:shadow-slate-900 sm:shadow-transparent"/>
                 <button
-                    className="block xl:hidden"
+                    className="block bg-amber-400 GameBarBtns rounded-md p-2 md:ml-2 hover:bg-violet-600"
                     onClick={() => {
                         BackState = true
                         BackSet(true)
@@ -83,7 +84,7 @@ const HeaderTasks: React.FC = () => {
 
                     }}
                 >
-                    <AppsIcon className="shadow-slate-400 dark:shadow-slate-900 sm:shadow-transparent"
+                    <IconGame className="shadow-slate-400 md:w-10 md:h-10 w-5 h-5 dark:shadow-slate-900 sm:shadow-transparent"
                               style={{fontSize: 33}}/>
                 </button>
                 <If condition={BackState}>

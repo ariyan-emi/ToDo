@@ -338,7 +338,7 @@ input[type="search"]::-webkit-search-results-decoration {
 .scroler{
     overflow-y: scroll;
 }
-.GameBarBtn:hover {
+.GameBarBtns:hover {
     background: #6D28D9;
     box-shadow: 0 0 5px #6D28D9,
     0 0 25px #6D28D9,
@@ -369,24 +369,16 @@ input[type="search"]::-webkit-search-results-decoration {
 .ScrollBars {
     overflow: visible;
 }
-
-.Backdrop {
-    display: flex;
-    position: absolute;
-    left: 0;
-    top: 0;
-    padding-left: 10px;
-    padding-right: 10px;
-    background-color: rgba(242, 242, 242, 0.6);
-    width: 100vw;
-    height: 100vh;
-
+.screender{
+    width: 100vw !important;
+    height: 100vh !important;
 }
+
+
 
 .GameBarMobile {
     width: 75vw;
     height: 50vh;
-    background-color: rgba(121, 91, 245, 0.2);
     border-radius: 50px;
     top: 50%;
     left: 50%;
@@ -402,11 +394,9 @@ input[type="search"]::-webkit-search-results-decoration {
 }
 
 .xTop {
-    position: relative;
-    width: 25px;
-    height: 25px;
-    top: 5%;
-    left: 90%;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0%);
     z-index: 99999;
 }
 

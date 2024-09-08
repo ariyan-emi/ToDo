@@ -22,7 +22,7 @@ export default function MobileAccountData({BackState, BackSet}: { BackState: boo
 
     const dispatch = useAppDispatch();
 
-    const [GameState, GameSet] = useState({game: "none", parentDiv: "DontShow"})
+    const [GameState, GameSet] = useState({game: "GameBar", parentDiv: "Show"})
     GameHooks.GameState = GameState
     GameHooks.GameSet = GameSet
 
@@ -56,7 +56,7 @@ export default function MobileAccountData({BackState, BackSet}: { BackState: boo
                 </div>
             </ElseIf>
             <ElseIf condition={GameState.game === "GameBar" && GameState.parentDiv === "Show"}>
-                <div className="ScrollBars ">
+                <div className="ScrollBars">
                     <div className={ClassSwicher(GameHooks.GameState.parentDiv)}>
 
                         <div className="GameBarMobile" style={{opacity: 1}}>
@@ -83,9 +83,7 @@ export default function MobileAccountData({BackState, BackSet}: { BackState: boo
             </ElseIf>
             <ElseIf condition={GameHooks.GameState.parentDiv == "DontShow"}>
                 <div>
-
                     <div className="justifyedGrid">
-                        <Weather/>
                         <div className='parent'>
                             <button className="child GameBarBtnMobile" onClick={() => {
                                 GameState.game = "GameBar"
@@ -94,12 +92,6 @@ export default function MobileAccountData({BackState, BackSet}: { BackState: boo
                             }}>
                                 <GameBar className="GameBarIconMobile "/>
                             </button>
-                           <div className="child">
-                               <LocalizationProvider dateAdapter={AdapterDayjs}>
-                                   <DateCalendar sx={{width:"90%"}} className="maxAccount" defaultValue={dayjs(new Date())} />
-                               </LocalizationProvider>
-                           </div>
-
                         </div>
                     </div>
                 </div>

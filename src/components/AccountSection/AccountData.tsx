@@ -52,7 +52,7 @@ const AccountData: React.FC = () => {
                         <LayoutMenus
                             menuOpen={menuOpen}
                             closeMenuHandler={closeMenuHandler}
-                            className="top-0 right-0"
+                            className="top-0 right-0 w-fit h-fit"
                         >
 
                             <If condition={GameHooks.GameState.game === "TicTacToe"}>
@@ -76,58 +76,31 @@ const AccountData: React.FC = () => {
                                 </div>
                             </ElseIf>
                             <ElseIf condition={GameState.game === "GameBar" && GameState.parentDiv === "Show"}>
-                                <div className={ClassSwicher(GameHooks.GameState.parentDiv)}>
+                                <div className="ScrollBars screender">
+                                    <div className={ClassSwicher(GameHooks.GameState.parentDiv)}>
 
-                                    <Close className="text-slate-400 xIconBig" onClick={() => {
-                                        GameState.game = "none"
-                                        GameState.parentDiv = "DontShow"
-                                        GameSet({...GameState})
-                                    }}/>
+                                        <div className="GameBarMobile" style={{opacity: 1}}>
 
-                                    <div className={ClassSwicher(GameHooks.GameState.game)} style={{opacity: 1}}>
-                                        <Close className="text-slate-400 xIconMini" onClick={() => {
-                                            GameState.game = "none"
-                                            GameState.parentDiv = "DontShow"
-                                            GameSet({...GameState})
-                                        }}/>
-<div className="CenterGamer">
-                                        <button className="m-10" onClick={() => {
-                                            GameState.game = "2048"
-                                            GameState.parentDiv = "Show"
-                                            GameSet({...GameState})
-                                        }}>
-                                            <button className="button-29 centered" role="button"><GameIcon2048
-                                                className="h-12 w-12 m-4 "/></button>
-                                        </button>
-                                        <button onClick={() => {
-                                            GameState.game = "TicTacToe"
-                                            GameState.parentDiv = "Show"
-                                            GameSet({...GameState})
-                                        }}>
-                                            <button className="button-29 centered" role="button"><TicTac className="h-12 w-12 m-4 "/>
+                                            <button className="m-10" onClick={() => {
+                                                GameState.game = "2048"
+                                                GameState.parentDiv = "Show"
+                                                GameSet({...GameState})
+                                            }}>
+                                                <button className="button-29" role="button"><GameIcon2048
+                                                    className="h-20 w-20 m-8"/></button>
                                             </button>
-                                        </button>
-</div>
+                                            <button onClick={() => {
+                                                GameState.game = "TicTacToe"
+                                                GameState.parentDiv = "Show"
+                                                GameSet({...GameState})
+                                            }}>
+                                                <button className="button-29" role="button"><TicTac className="h-20 w-20 m-8"/>
+                                                </button>
+                                            </button>
+                                        </div>
                                     </div>
                                 </div>
                             </ElseIf>
-
-
-                            <div className="grid grid-cols-1">
-                                <div className=""><Weather/></div>
-                                <LocalizationProvider dateAdapter={AdapterDayjs}>
-                                            <DateCalendar sx={{width:"90%"}} className="maxAccount" defaultValue={dayjs(new Date())} />
-                                </LocalizationProvider>
-                                <div className="text-center">
-                                    <button className="mt-2 GameBarBtn lg:absolute lg:bottom-0 lg:right-0 2xl:relative 2xl:bottom-0 2xl:right-0 " onClick={() => {
-                                        GameState.game = "GameBar"
-                                        GameState.parentDiv = "Show"
-                                        GameSet({...GameState})
-                                    }}>
-                                        <GameBar className="GameBarIcon 2xl:w-20 2xl:h-20"/>
-                                    </button>
-                                </div>
-                            </div>
                         </LayoutMenus>
         </div>
     );
